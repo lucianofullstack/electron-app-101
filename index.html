@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <script src="node_modules/xel/xel.js" type="module"></script>
+    <meta name="xel-theme" content="node_modules/xel/themes/fluent.css">
+    <meta name="xel-accent-color" content="yellow">
+    <meta name="xel-iconsets" content="node_modules/xel/iconsets/material-outlined.svg">
+    <meta name="xel-locales" content="node_modules/xel/locales/en.ftl">
+
+    <title>Hello World!</title>
+    <style>
+        ::-webkit-scrollbar {
+    display: none!important;
+}
+body {
+    overflow-x: hidden!important;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <x-box>
+
+    <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+    </x-box>
+
+    <!-- You can also require other files to run in this process -->
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
+
+
